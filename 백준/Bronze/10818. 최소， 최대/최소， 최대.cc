@@ -2,26 +2,23 @@
 using namespace std;
 
 int main(){
-    int N;
-    
-    cin >> N;
-    int A[1000000];
-    for(int i=0; i<N; i++){
-        cin>>A[i];
-    }
-    int S=A[0];
-    int B=A[0];
+    int N,I;
+    int B=-100000000;
+    int S=100000000;
+    int cnt = 0;
 
-    for(int i=0; i<N; i++){
-        if(A[i]<S){
-            S=A[i];
+    cin >> N;
+    
+    for (int i=0; i<N; i++){
+        cin >> I;
+    
+        if (I<S){
+            S=I;
+        } 
+        if (I > B){
+            B=I;
         }
     }
-    for(int i=0; i<N; i++){
-        if(A[i]>B){
-            B=A[i];
-        }  
-    }
-        cout << S << " " << B << endl;
-
+    cout << S << " " << B;
+    return 0;
 }
