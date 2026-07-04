@@ -7,6 +7,9 @@ def solution(s):
         if word == "":
             answer.append("")
         else:
-            answer.append(word[0].upper() + word[1:].lower())
+            answer.append(word[0].upper()+word[1:].lower())
     
     return " ".join(answer)
+    
+            
+        
