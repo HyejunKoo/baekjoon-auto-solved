@@ -4,11 +4,12 @@ def solution(s):
     for ch in s:
         if stack and stack[-1] == ch:
             stack.pop()
-        else:
+        else: 
             stack.append(ch)
+        
     if not stack:
         return 1
     else:
         return 0
-        
+            
     
